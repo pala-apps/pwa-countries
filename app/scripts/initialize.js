@@ -64,7 +64,7 @@ function displayCountries( countries ) {
     li.className = "collection-item avatar";
 
     const img = document.createElement( 'img' );
-    img.src = `https://www.countries-ofthe-world.com/flags/flag-of-${ country.name.split(' ').join('-') }.png`;
+    img.src = `http://www.geonames.org/flags/x/${country.alpha2Code.toLowerCase()}.gif`
     img.className = "circle"
 
     li.appendChild( img );
@@ -76,7 +76,7 @@ function displayCountries( countries ) {
     li.appendChild( span )
 
     const p = document.createElement( 'p' );
-    p.innerHTML= `${ country.region } <br> ${ country.population }`
+    p.innerHTML= `${ country.capital } <br> ${ country.population }`
 
     li.appendChild( p );
 

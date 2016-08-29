@@ -3,9 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <link rel="manifest" href="/manifest.json">
+
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-  <title>Brunch with ES6</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather App">
+  <link rel="apple-touch-icon" href="images/globe-152.png">
+
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <title>PWA Countries</title>
   <link rel="stylesheet" href="/styles/main.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
@@ -17,11 +27,9 @@
   </nav>
 
   <div id="app" class="container">
-
     <ul id="countriesList" class="collection">
-      
-    </ul>
 
+    </ul>
   </div>
 
 
