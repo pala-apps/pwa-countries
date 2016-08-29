@@ -11,7 +11,6 @@ if ('serviceWorker' in navigator &&
     (window.location.protocol === 'https:' || isLocalhost)) {
   navigator.serviceWorker.register('sw.js')
   .then(function(registration) {
-    console.log('in service worker setup')
     // updatefound is fired if service-worker.js changes.
     registration.onupdatefound = function() {
       // updatefound is also fired the very first time the SW is installed,
