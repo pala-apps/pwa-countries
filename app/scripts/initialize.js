@@ -50,6 +50,37 @@ if ('serviceWorker' in navigator &&
 var request = new XMLHttpRequest();
 request.open("GET", "https://restcountries.eu/rest/v1/all");
 request.onload = function(){
-  console.log('got data', request.responseText);
+  const countries = JSON.parse( request.responseText );
+  displayCountries( countries )
 }
 request.send();
+
+const countriesList = document.getElementById( 'countriesList' );
+
+function displayCountries( countries ) {
+  countries.forEach( ( country ) => {
+
+    const li = document.createElement( 'li' );
+    li.className = "collection-item avatar";
+
+    const img = document.createElement( 'img' );
+    img.src = `https://www.countries-ofthe-world.com/flags/flag-of-${ country.name.split(' ').join('-') }.png`;
+    img.className = "circle"
+
+    li.appendChild( img );
+
+    const span = document.createElement( 'span' )
+    span.className = "title";
+    span.innerText = country.name;
+
+    li.appendChild( span )
+
+    const p = document.createElement( 'p' );
+    p.innerHTML= `${ country.region } <br> ${ country.population }`
+
+    li.appendChild( p );
+
+    countriesList.appendChild( li );
+
+  })
+}
