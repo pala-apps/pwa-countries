@@ -64,7 +64,7 @@ function displayCountries( countries ) {
     li.className = "collection-item avatar";
 
     const img = document.createElement( 'img' );
-    img.src = `http://www.geonames.org/flags/x/${country.alpha2Code.toLowerCase()}.gif`
+    img.src = `/images/flags/${country.alpha2Code.toLowerCase()}.gif`
     img.className = "circle"
 
     li.appendChild( img );
